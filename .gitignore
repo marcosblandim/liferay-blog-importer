@@ -1,3 +1,8 @@
+.prettierrc.js
+*.md
+!README.md
+
+# blade's default
 build/*
 dist/*
 node_modules/*
