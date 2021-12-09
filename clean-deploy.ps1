@@ -1,0 +1,1 @@
+blade gw clean && blade gw build && blade gw deploy
