@@ -1,13 +1,13 @@
 {
-	"translatorTextKey": "",
-	"supportedLocales": [],
-	"liferayDir": "C:\\marcos\\liferay\\bundles\\7-3-ga8",
-	"webpack": {
-		"rules": [
-			{
-				"test": "src\\\\.*\\.js$",
-				"use": "babel-loader"
-			}
-		]
-	}
+    "translatorTextKey": "",
+    "supportedLocales": [],
+    "liferayDir": "../../bundles",
+    "webpack": {
+        "rules": [
+            {
+                "test": "src\\\\.*\\.js$",
+                "use": "babel-loader"
+            }
+        ]
+    }
 }

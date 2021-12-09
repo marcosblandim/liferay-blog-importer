@@ -2,7 +2,7 @@
     "batchMode": false,
     "answers": {
         "*": {
-            "liferayDir": "C:\\marcos\\marcos\\liferay-workspaces\\liferay-samples-7_3_7-ga8\\bundles",
+            "liferayDir": "../../bundles",
             "target": "react-widget",
             "folder": "modules\\blog-importer",
             "description": "blog-importer",
