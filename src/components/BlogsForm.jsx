@@ -2,7 +2,14 @@ import React from 'react';
 import ClayButton from '@clayui/button';
 import ClayForm, { ClayInput } from '@clayui/form';
 
-// http://localhost:8080/api/jsonws?contextName=blogs&signature=%2Fblogs.blogsentry%2Fadd-entry-16-java.lang.String-java.lang.String-java.lang.String-java.lang.String-int-int-int-int-int-boolean-boolean-%5BLjava.lang.String%3B-java.lang.String-com.liferay.portal.kernel.servlet.taglib.ui.ImageSelector-com.liferay.portal.kernel.servlet.taglib.ui.ImageSelector-com.liferay.portal.kernel.service.ServiceContext
+/**
+ *
+ * Gets blogs from user input and
+ * starts migration
+ *
+ * @param {*} param0
+ * @returns
+ */
 export default function BlogImporter({ setBlogs, toggleMigrate }) {
     function onSubmit(e) {
         e.preventDefault();

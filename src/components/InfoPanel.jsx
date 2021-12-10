@@ -1,6 +1,13 @@
 import React from 'react';
 import MigrationPanel from './MigrationPanel';
 
+/**
+ *
+ * Handle all the migration
+ *
+ * @param {*} param0
+ * @returns
+ */
 export default function InfoPanel({ blogs, migrate, toggleMigrate }) {
     return (
         <div>

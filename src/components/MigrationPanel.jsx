@@ -41,6 +41,14 @@ function processBlog(blog) {
     return { ...blog, displayDateMonth: processedDisplayDateMonth };
 }
 
+/**
+ *
+ * Execute the migration,
+ * while showing its progress
+ *
+ * @param {*} param0
+ * @returns
+ */
 export default function MigrationPanel({ blogs, toggleMigrate }) {
     const [currBlogIndex, setCurrBlogIndex] = useState(0);
 

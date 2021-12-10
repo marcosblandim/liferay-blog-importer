@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 import BlogsForm from './components/BlogsForm';
 import InfoPanel from './components/InfoPanel';
 
+/**
+ *
+ * Imports Blogs from user input
+ *
+ * @returns
+ */
 export default function BlogImporter() {
     const [blogs, setBlogs] = useState([]);
     const [migrate, setMigrate] = useState(false);
