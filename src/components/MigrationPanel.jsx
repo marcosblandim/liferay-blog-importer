@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
 function addBlog(blog) {
+    // handle this error
     validateBlog(blog);
-    const precessedBlog = processBlog(blog);
 
+    const today = new Date();
     const defaultBlog = {
         subtitle: '',
         urlTitle: '',
         description: '',
-        displayDateMonth: 0,
-        displayDateDay: 22,
-        displayDateYear: 2023,
-        displayDateHour: 16,
-        displayDateMinute: 123,
+        displayDateMonth: today.getMonth(),
+        displayDateDay: today.getDate(),
+        displayDateYear: today.getFullYear(),
+        displayDateHour: today.getHours(),
+        displayDateMinute: today.getMinutes(),
         allowPingbacks: true,
         allowTrackbacks: true,
         trackbacks: null,
@@ -20,11 +21,11 @@ function addBlog(blog) {
         '-coverImageImageSelector': '',
         '-smallImageImageSelector': '',
     };
-
-    return Liferay.Service('/blogs.blogsentry/add-entry', {
+    const blogsWithDefaults = {
         ...defaultBlog,
-        ...precessedBlog,
-    });
+        ...blog,
+    };
+    return Liferay.Service('/blogs.blogsentry/add-entry', blogsWithDefaults);
 }
 
 function validateBlog({ title, content }) {
@@ -34,11 +35,6 @@ function validateBlog({ title, content }) {
     if (!content) {
         throw new Error('no-content');
     }
-}
-
-function processBlog(blog) {
-    const processedDisplayDateMonth = blog.displayDateMonth - 1;
-    return { ...blog, displayDateMonth: processedDisplayDateMonth };
 }
 
 /**
