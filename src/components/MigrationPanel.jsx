@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { format } from '../utils';
 
 function addBlog(blog) {
     // handle this error
@@ -57,13 +58,17 @@ export default function MigrationPanel({ blogs, toggleMigrate }) {
         } else {
             setCurrBlogIndex(0);
             toggleMigrate();
-            alert(`migrated ${blogs.length} blogs`); // TODO: i18n
+            alert(format(Liferay.Language.get('migrated'), blogs.length));
         }
     }, [currBlogIndex]);
     // TODO: implement loader
     return (
         <div>
-            migrating {currBlogIndex + 1}/{blogs.length}
+            {format(
+                Liferay.Language.get('migrating'),
+                currBlogIndex + 1,
+                blogs.length
+            )}
         </div>
     );
 }

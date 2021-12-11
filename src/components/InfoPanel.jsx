@@ -1,4 +1,5 @@
 import React from 'react';
+import { format } from '../utils';
 import MigrationPanel from './MigrationPanel';
 
 /**
@@ -12,10 +13,15 @@ export default function InfoPanel({ blogs, migrate, toggleMigrate }) {
     return (
         <div>
             {!blogs.length ? (
-                'no blogs loaded'
+                Liferay.Language.get('no-blogs-loaded')
             ) : (
                 <React.Fragment>
-                    Number of blogs loaded: {blogs.length}
+                    {format(
+                        Liferay.Language.get(
+                            'loaded-blogs-number',
+                            blogs.length
+                        )
+                    )}
                     {migrate && (
                         <MigrationPanel
                             blogs={blogs}
