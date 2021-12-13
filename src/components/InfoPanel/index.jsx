@@ -17,10 +17,8 @@ export default function InfoPanel({ blogs, migrate, toggleMigrate }) {
             ) : (
                 <React.Fragment>
                     {format(
-                        Liferay.Language.get(
-                            'loaded-blogs-number',
-                            blogs.length
-                        )
+                        Liferay.Language.get('loaded-blogs-number'),
+                        blogs.length
                     )}
                     {migrate && (
                         <MigrationPanel
