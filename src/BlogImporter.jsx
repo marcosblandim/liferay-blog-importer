@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import BlogsForm from './components/BlogsForm';
-import InfoPanel from './components/InfoPanel';
+import BlogsForm from './components/BlogsForm/index';
+import InfoPanel from './components/InfoPanel/index';
 
 /**
  *

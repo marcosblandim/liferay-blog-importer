@@ -1,6 +1,6 @@
 import React from 'react';
-import { format } from '../utils';
-import MigrationPanel from './MigrationPanel';
+import { format } from '../../utils';
+import MigrationPanel from './MigrationPanel/index';
 
 /**
  *
