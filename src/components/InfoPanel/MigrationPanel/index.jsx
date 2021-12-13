@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ClayProgressBar from '@clayui/progress-bar';
 import { format } from '../../../utils';
 
 function addBlog(blog) {
@@ -62,8 +63,15 @@ export default function MigrationPanel({ blogs, toggleMigrate }) {
         }
     }, [currBlogIndex]);
     // TODO: implement loader
+
+    const progessPercentage = Math.round((currBlogIndex / blogs.length) * 100);
     return (
         <div>
+            <ClayProgressBar value={progessPercentage}>
+                {`${progessPercentage}%`}
+            </ClayProgressBar>
+            <br />
+            <br />
             {format(
                 Liferay.Language.get('migrating'),
                 currBlogIndex + 1,

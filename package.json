@@ -17,6 +17,7 @@
     "dependencies": {
         "@clayui/button": "^3.40.0",
         "@clayui/form": "^3.40.0",
+        "@clayui/progress-bar": "^3.40.0",
         "react": "^16.12.0",
         "react-dom": "^16.12.0"
     },
