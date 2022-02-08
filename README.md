@@ -6,4 +6,6 @@ A Liferay React Widget module for importing blogs from a JSON file.
 - Blade 4.0.9
 
 ## TODO
-- use [liferay headless api](https://learn.liferay.com/dxp/latest/en/headless-delivery/consuming-apis/consuming-rest-services.html#getting-and-posting-data)
+- check if resource permissions are working right
+- implement portlets permissions
+- add sample json file
